@@ -15,8 +15,6 @@ const Search = (props) => {
   return (
     <StyleRoot>
       <form
-        action="http://localhost:3000/"
-        method="POST"
         onSubmit={searchTripHandler}
         style={{
           textAlign: "center",
