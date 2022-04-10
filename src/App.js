@@ -3,17 +3,19 @@ import Axios from "axios";
 
 import Search from "./components/SearchTrips/Search";
 import Trips from "./components/Trips/Trips";
-import { SearchTrip } from "./components/APICall";
+import { SearchTrip } from "./components/APICall/SearchHandler";
 
-function App() {
+const App = () => {
+
   const [trips, settrips] = useState([]);
 
+  // this will get the lists of all trips and display to users
   useEffect(() => {
     Axios.get("http://localhost:5000/trips")
       .then((res) =>
         res.status === 200
           ? settrips(res.data)
-          : console.log("somthings wrong!")
+          : console.log(`Somethings wrong, Status Code: ${res.status}`)
       )
       .catch((err) => console.log(err));
   }, []);
@@ -23,6 +25,8 @@ function App() {
   };
 
   const searchQueryHandler = (query) => {
+    // this function will get the result from the search and pass it to 
+    // tripsListUpdater to show result to users
     SearchTrip(query, tripsListUpdater);
   };
 

@@ -1,7 +1,7 @@
 import React from "react";
-import Images from "./Trip/Images";
+import SmallImages from "./Trip/SmallImages";
 import Tags from "./Trip/Tags";
-import MainImage from "./Trip/MainImage";
+import BigImage from "./Trip/BigImage";
 import Description from "./Trip/Description";
 import TripTitle from "./Trip/TripTitle";
 
@@ -9,6 +9,7 @@ import TripTitle from "./Trip/TripTitle";
 import { StyleRoot } from "radium";
 
 const Trip = (props) => {
+  // this function lift the query props from "Tags.js"
   const queryFromTagsHandler = (query) => {
     props.queryFromTripHandler(query);
   };
@@ -25,7 +26,7 @@ const Trip = (props) => {
         }}
         className="trip"
       >
-        <MainImage photos={props.photos} />
+        <BigImage photos={props.photos} />
         <div
           style={{
             width: "100%",
@@ -34,7 +35,7 @@ const Trip = (props) => {
           <TripTitle title={props.title} url={props.url} />
           <Description url={props.url} description={props.description} />
           <Tags tags={props.tags} queryFromTagsHandler={queryFromTagsHandler} />
-          <Images photos={props.photos.slice(1)} />
+          <SmallImages photos={props.photos.slice(1)} />
         </div>
       </div>
     </StyleRoot>

@@ -13,7 +13,7 @@ const Description = (props) => {
       style={{
         fontSize: "0.65rem",
         lineHeight: "1.3rem",
-        marginBottom: "0.25rem",
+        marginBottom: "1rem",
         color: "#808080",
       }}
     >

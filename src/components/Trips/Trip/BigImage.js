@@ -3,7 +3,7 @@ import React from "react";
 // for media query
 import { StyleRoot } from "radium";
 
-const MainImage = (props) => {
+const BigImage = (props) => {
   return (
     <StyleRoot>
       <div
@@ -31,4 +31,4 @@ const MainImage = (props) => {
   );
 };
 
-export default MainImage;
+export default BigImage;

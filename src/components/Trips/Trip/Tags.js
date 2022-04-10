@@ -9,10 +9,20 @@ const Tags = (props) => {
         marginBottom: "1rem",
       }}
     >
+      <p
+        style={{
+          fontSize: "0.6rem",
+          color: "#808080",
+        }}
+      >
+        Tags: &nbsp;
+      </p>
       {props.tags.map((tag) => (
-        <li
+        <a
           key={tag}
           onClick={(event) => {
+            //this will pass the tag name to "App.js" as a search query
+            //"Tags.js -> Trip.js -> Trips.js -> App.js"
             props.queryFromTagsHandler(tag);
           }}
           style={{
@@ -25,7 +35,7 @@ const Tags = (props) => {
           }}
         >
           {tag}
-        </li>
+        </a>
       ))}
     </div>
   );

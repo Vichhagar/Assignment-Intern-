@@ -1,6 +1,6 @@
 import React from "react";
 
-const Images = (props) => {
+const SmallImages = (props) => {
   return (
     <div
       style={{
@@ -26,4 +26,4 @@ const Images = (props) => {
   );
 };
 
-export default Images;
+export default SmallImages;

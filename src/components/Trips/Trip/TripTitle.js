@@ -8,11 +8,16 @@ const TripTitle = (props) => {
         textDecoration: "none",
         cursor: "pointer",
         color: "#333",
-        marginBottom: "1rem",
       }}
       href={props.url}
     >
-      <h4>{props.title}</h4>
+      <h4
+        style={{
+          marginBottom: "0.6rem",
+        }}
+      >
+        {props.title}
+      </h4>
     </a>
   );
 };

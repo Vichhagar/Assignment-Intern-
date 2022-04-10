@@ -2,9 +2,11 @@ import React from "react";
 import Trip from "./Trip";
 
 const Trips = (props) => {
+  // this function lift the query props from "Trip.js"
   const queryFromTripHandler = (query) => {
     props.searchQueryHandler(query);
   };
+  
   return (
     <div
       style={{
